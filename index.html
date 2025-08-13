@@ -18,8 +18,39 @@
           src="./assets/images/illustration-empty-cart.svg"
           alt="Empty cart"
         />
-        <p class="cart-text">Your added items will appear here</p>
+        <p class="cart-text" id="cart-text">
+          Your added items will appear here
+        </p>
+        <div class="cart-items"></div>
+        <div class="cart-actions">
+          <div class="total-price">Total:</div>
+          <div class="total-price-value">$0.00</div>
+        </div>
+        <p class="order-des" id="order-des">
+          <img
+            src="/assets/images/icon-carbon-neutral.svg"
+            width="20px"
+            height="20px"
+          />
+          <span>This is a carbon neutral delivery</span>
+        </p>
+        <button id="confirmation-btn" style="display: none" class="confirmation-btn">
+          confirm order
+        </button>
       </aside>
+      <!-- Confirmation Modal -->
+      <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+          <span class="checkmark">✔</span>
+          <h2 class="order">Order Confirmed</h2>
+          <p class="order-text">We hope you enjoy your food!</p>
+          <div class="order-summary" id="modal-order-summary">
+            <!-- Cart items will be inserted here -->
+          </div>
+          <p class="modal-total" id="modal-total"></p>
+          <button id="new-order-btn">Start New Order</button>
+        </div>
+      </div>
     </main>
     <script src="index.js" type="module"></script>
   </body>
